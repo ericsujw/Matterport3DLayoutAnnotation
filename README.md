@@ -69,6 +69,14 @@ You could follow the steps below to get the same panorama as ours.
 
 ## Citation
 If you use this dataset for your research, please cite our paper.
+```
+@article{zou20193d,
+  title={3D Manhattan Room Layout Reconstruction from a Single 360 Image},
+  author={Zou, Chuhang and Su, Jheng-Wei and Peng, Chi-Han and Colburn, Alex and Shan, Qi and Wonka, Peter and Chu, Hung-Kuo and Hoiem, Derek},
+  journal={arXiv preprint arXiv:1910.04099},
+  year={2019}
+}
+```
 
 ## License
 
