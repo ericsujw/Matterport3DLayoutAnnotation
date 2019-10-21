@@ -11,7 +11,7 @@ You could follow the steps below to get the same panorama as ours.
 ## Data
 * **Data List**: We select out 2295 panoramas form original Matterport3D dataset and split out the [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists used in our paper.
 * **Data Structure**: We follow the data structure using in the [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). You could refer to these two repo to get more information. We've aligned all the label to camera height is equal to 1.6m and json file structure should be similar as follow:
-```json
+```javascript
 {
     "cameraHeight": 1.6, // distance between camera and floor
     "layoutHeight": 2.9809624004364013, // distance between floor and ceiling
