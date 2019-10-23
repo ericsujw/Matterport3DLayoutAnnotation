@@ -9,8 +9,8 @@ Note that we release only the annotated layout files, you have to generate corre
 3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
 ## Data format
-* **Panorama list**: We selected 2295 panoramas from the original Matterport3D dataset and splited the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
-* **Annotation format**: We follow the data structure using in the [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). You could refer to these two repo to get more information. We've aligned all the label to camera height is equal to 1.6m and json file structure should be similar as follow:
+* **Panorama list**: The dataset includes 2295 panoramas selected from the Matterport3D dataset and we splited the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
+* **Annotation format**: We use the same the annotation format as [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). An example json file is shown below. Please refer to these two repos for more details. Note that we've aligned all the annotated layouts to the camera height of 1.6m.
 ```javascript
 {
     "cameraHeight": 1.6, // distance between camera and floor
@@ -65,7 +65,7 @@ Note that we release only the annotated layout files, you have to generate corre
     "panoId": "nothing" // a simple ID of panorama
 }
 ```
-* **File Name**: We zip all the annotation file in the [label_data.zip](label_data.zip). The labeling files' naming rule is following the `<dir1>_<dir2>_label.json` format that is same to the Matterport3D's folder structure.
+* **File name**: We zip all the annotation files in the [label_data.zip](label_data.zip). The filename `<dir1>_<dir2>_label.json` follows the folder structure of Matterport3D dataset.
 
 ## Citation
 If you use this dataset for your research, please cite our paper.
