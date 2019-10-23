@@ -1,4 +1,4 @@
-# The MatterportLayout Dataset
+# The MatterportLayout dataset
 
 This dataset extends the Matterport3D dataset with general Manhattan layout annotations and is used in our work "[3D Manhattan Room Layout Reconstruction from a Single 360 Image](http://arxiv.org/abs/1910.04099) for performance evaluation".
 
@@ -8,9 +8,9 @@ Note that we release only the annotated layout files, you have to generate corre
 2. Follow the matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
 3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
-## Data
-* **Data List**: We select out 2295 panoramas form original Matterport3D dataset and split out the [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists used in our paper.
-* **Data Structure**: We follow the data structure using in the [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). You could refer to these two repo to get more information. We've aligned all the label to camera height is equal to 1.6m and json file structure should be similar as follow:
+## Data format
+* **Panorama list**: We selected 2295 panoramas from the original Matterport3D dataset and splited the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
+* **Annotation format**: We follow the data structure using in the [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). You could refer to these two repo to get more information. We've aligned all the label to camera height is equal to 1.6m and json file structure should be similar as follow:
 ```javascript
 {
     "cameraHeight": 1.6, // distance between camera and floor
