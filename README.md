@@ -1,12 +1,12 @@
-# Matterport3D Layout Annotation
+# The MatterportLayout Dataset
 
-This is the layout annotation dataset of the Matterport3D used in our paper "[3D Manhattan Room Layout Reconstruction from a Single 360 Image](http://arxiv.org/abs/1910.04099)".
+This dataset extends the Matterport3D dataset with general Manhattan layout annotations and is used in our work "[3D Manhattan Room Layout Reconstruction from a Single 360 Image](http://arxiv.org/abs/1910.04099) for performance evaluation".
 
 ## Pre-processing
-You could follow the steps below to get the same panorama as ours.
-1. **Matterport3D**: Download all the data from [Matterport3D](https://github.com/niessner/Matterport).
-2. **Panorama Image Generation**: Please follow the instruction of the [PanoBasic](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44) to stitch the skybox images of the Matterport3D into the equirectangular panorama.
-3. **Manhattan Alignment**: The panorama should be already aligned with the Manhattan World, then our annotation could perfectly algin with the images. We recommand you using the [alignment tool](https://github.com/SunDaDenny/PanoAnnotator#pre-process) provided by [PanoBasic](https://github.com/yindaz/PanoBasic).
+Note that we release only the annotated layout files, you have to generate corresponding RGB panoramas using the instructions as follows:
+1. Download the **[Matterport3D](https://github.com/niessner/Matterport)** dataset.
+2. Follow the matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
+3. Run the script provided in **[PanoAnnotator/pre-process]((https://github.com/SunDaDenny/PanoAnnotator#pre-process))** to generate Manhattan-aligned panoramas.
 
 ## Data
 * **Data List**: We select out 2295 panoramas form original Matterport3D dataset and split out the [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists used in our paper.
