@@ -6,7 +6,7 @@ This dataset extends the Matterport3D dataset with general Manhattan layout anno
 Note that we release only the annotated layout files, you have to generate corresponding RGB panoramas using the instructions as follows:
 1. Download the **[Matterport3D](https://github.com/niessner/Matterport)** dataset.
 2. Follow the matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
-3. Run the script provided in **[PanoAnnotator/pre-process]((https://github.com/SunDaDenny/PanoAnnotator#pre-process))** to generate Manhattan-aligned panoramas.
+3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
 ## Data
 * **Data List**: We select out 2295 panoramas form original Matterport3D dataset and split out the [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists used in our paper.
