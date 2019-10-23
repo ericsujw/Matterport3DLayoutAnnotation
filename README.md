@@ -5,11 +5,11 @@ This dataset extends the Matterport3D dataset with general Manhattan layout anno
 ## Pre-processing
 Note that we release only the annotated layout files, you have to generate corresponding RGB panoramas using the instructions as follows:
 1. Download the **[Matterport3D](https://github.com/niessner/Matterport)** dataset.
-2. Follow the matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
+2. Follow the Matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
 3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
 ## Data format
-* **Panorama list**: The dataset includes 2295 panoramas selected from the Matterport3D dataset and we splited the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
+* **Panorama list**: The dataset includes 2295 panoramas selected from the Matterport3D dataset and we split the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
 * **Annotation format**: We use the same the annotation format as [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). An example json file is shown below. Please refer to these two repos for more details. Note that we've aligned all the annotated layouts to the camera height of 1.6m.
 ```javascript
 {
