@@ -9,6 +9,7 @@ Note that we release only the annotated layout files, you have to generate corre
 3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
 ## Data format
+* We are dealing with some dataset issue, and we will release it later.
 * **Panorama list**: The dataset includes 2295 panoramas selected from the Matterport3D dataset and we split the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
 * **Annotation format**: We use the same the annotation format as [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). An example json file is shown below. Please refer to these two repos for more details. Note that we've aligned all the annotated layouts to the camera height of 1.6m.
 ```javascript
