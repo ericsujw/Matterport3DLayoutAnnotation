@@ -1,15 +1,14 @@
 # The MatterportLayout dataset
 
-This dataset extends the Matterport3D dataset with general Manhattan layout annotations and is used in our work "[3D Manhattan Room Layout Reconstruction from a Single 360 Image](http://arxiv.org/abs/1910.04099) for performance evaluation".
+This dataset extends the Matterport3D dataset with general Manhattan layout annotations and is used in our work "[Manhattan Room Layout Reconstruction from a Single 360&deg; image: A Comparative Study of State-of-the-art Methods](http://arxiv.org/abs/1910.04099)" for performance evaluation.
 
 ## Pre-processing
-Note that we release only the annotated layout files, you have to generate corresponding RGB panoramas using the instructions as follows:
+We released only the annotated layout files. To generate the corresponding RGB panoramas, use the following instructions:
 1. Download the **[Matterport3D](https://github.com/niessner/Matterport)** dataset.
 2. Follow the Matlab codes in **[PanoBasic/demo_matterport.m](https://github.com/yindaz/PanoBasic/blob/master/demo_matterport.m#L44)** to stitch the skybox images of the Matterport3D into the equirectangular panoramas.
 3. Run the script provided in **[PanoAnnotator/pre-process](https://github.com/SunDaDenny/PanoAnnotator#pre-process)** to generate Manhattan-aligned panoramas.
 
 ## Data format
-* We are dealing with some issues with the dataset, and we will release it later. If there's an urgent need, you can send an email to me.
 * **Panorama list**: The dataset includes 2295 panoramas selected from the Matterport3D dataset and we split the images into [train](data_list/mp3d_train.txt)/[val](data_list/mp3d_val.txt)/[test](data_list/mp3d_test.txt) lists.
 * **Annotation format**: We use the same the annotation format as [DuLa-Net](https://github.com/SunDaDenny/DuLa-Net) and [PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator). An example json file is shown below. Please refer to these two repos for more details. Note that we've aligned all the annotated layouts to the camera height of 1.6m.
 ```javascript
@@ -66,13 +65,13 @@ Note that we release only the annotated layout files, you have to generate corre
     "panoId": "nothing" // a simple ID of panorama
 }
 ```
-* **File name**: The filename `<dir1>_<dir2>_label.json` follows the folder structure of Matterport3D dataset.
+* **File name**: We zip all the annotation files in the [label_data.zip](label_data.zip). The filename `<dir1>_<dir2>_label.json` follows the folder structure of Matterport3D dataset.
 
 ## Citation
-If you use this dataset for your research, please cite our paper.
+If you use this dataset for your research, please cite our paper as follows:
 ```
 @article{zou20193d,
-  title={3D Manhattan Room Layout Reconstruction from a Single 360 Image},
+  title={Manhattan Room Layout Reconstruction from a Single 360$^{\circ}$ image: A Comparative Study of State-of-the-art Methods},
   author={Zou, Chuhang and Su, Jheng-Wei and Peng, Chi-Han and Colburn, Alex and Shan, Qi and Wonka, Peter and Chu, Hung-Kuo and Hoiem, Derek},
   journal={arXiv preprint arXiv:1910.04099},
   year={2019}
@@ -82,3 +81,6 @@ If you use this dataset for your research, please cite our paper.
 ## License
 
 The data is released under the [Matterport3D Terms of Use](http://kaldir.vc.in.tum.de/matterport/MP_TOS.pdf), and the code is released under the MIT license. By using this dataset, you agree to all the terms in the [Matterport3D Terms of Use](http://kaldir.vc.in.tum.de/matterport/MP_TOS.pdf).
+
+## Acknowledgement
+For all the layouts in the dataset, we started with initial layouts from [LayoutMP3D](https://arxiv.org/abs/2011.11498), which is also annotated with **[PanoAnnotator](https://github.com/SunDaDenny/PanoAnnotator)**.
